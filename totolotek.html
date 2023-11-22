@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tworzenie tabeli za pomocą pętli</title>
+    <style>
+        table,tr,td{
+            border: 1px solid blue;
+        }
+        table{
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var i=1, a;
+    document.write("<table>");
+    do{
+        a=parseInt(Math.random()*100+1)
+        if (a<49){
+            document.write("<tr><td>"+a+"</td></tr>");
+            i++;}
+    }while(i<=6);
+    document.write("</table>");
+</script>
+</body>
+</html>

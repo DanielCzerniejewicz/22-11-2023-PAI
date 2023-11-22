@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #lewo{
+            position: absolute;
+            width: 50%;
+            height: 100vh;
+            background-color: sienna;
+        }
+        #prawo{
+            position: absolute;
+            width: 50%;
+            height: 100vh;
+            background-color: crimson;
+            right: 0%;
+        }
+        #wprowadzanko{
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            margin-left:25%;
+            margin-top:25%;
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="lewo">
+
+        <div id="wprowadzanko">
+            <input type="text" placeholder="Wprowadź rozmiar trzcionki" id="rozmiar">
+            <br>
+            <input type="text" placeholder="Wprowadź tekst" id="tekst">
+            <br>
+            <input type="text" placeholder="Wprowadź kolor" id="kolor">
+            <br>
+            <button onclick="zmiana()">Wyślij</button>
+        </div>
+
+    </div>
+    <div id="prawo">
+
+    </div>
+</body>
+<script>
+    function zmiana() {
+        let rozmiar = document.getElementById("rozmiar").value;
+        let tekst = document.getElementById("tekst").value;
+        let kolor = document.getElementById("kolor").value;
+        document.getElementById("prawo").innerHTML = `<font size="${rozmiar}" color="${kolor}">${tekst}</font>`
+    }
+
+</script>
+</html>
